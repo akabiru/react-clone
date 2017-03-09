@@ -1,4 +1,20 @@
 {
+  "tweets": [
+    {
+      "id": 1,
+      "userId": 1,
+      "body": "React is awesome!",
+      "noOfLikes": 24,
+      "datePosted": "2017-03-22:120022"
+    }
+  ],
+  "users": [
+    { 
+      "id": 1,
+      "handle": "@mark",
+      "name": "Mark Zuck"
+    }
+  ],
   "posts": [
     {
       "id": 1,
