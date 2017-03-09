@@ -5,7 +5,28 @@
       "userId": 1,
       "body": "React is awesome!",
       "noOfLikes": 24,
-      "datePosted": "2017-03-22:120022"
+      "datePosted": "2017-03-22 12:00:22"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "body": "...so is React Native!",
+      "noOfLikes": 12,
+      "datePosted": "2017-03-22 12:00:22"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "body": "I wonder what Flux is for",
+      "noOfLikes": 1,
+      "datePosted": "2017-03-22 12:00:22"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "body": "Andela is cool",
+      "noOfLikes": 2,
+      "datePosted": "2017-03-22 12:00:22"
     }
   ],
   "users": [
@@ -13,6 +34,16 @@
       "id": 1,
       "handle": "@mark",
       "name": "Mark Zuck"
+    },
+    { 
+      "id": 2,
+      "handle": "@austin",
+      "name": "Austin Kabiru"
+    },
+    { 
+      "id": 1,
+      "handle": "@jon",
+      "name": "Jon Chan"
     }
   ],
   "posts": [
