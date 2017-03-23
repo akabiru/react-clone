@@ -16,13 +16,21 @@ class App extends Component {
   }
 
   componentWillMount() {
-    axios.get('http://localhost:4000/tweets')
-      .then(tweets => this.setState({ tweets: tweets.data }))
-      .catch(error => console.error(error))
+    var theState = {}
 
     axios.get('http://localhost:4000/users')
-      .then((users) => this.setState({ users: users.data }))
-      .catch((error) => console.error(error))
+      .then(users => theState["users"] = users.data)
+      .catch(error => console.error(error))
+
+    axios.get('http://localhost:4000/tweets')
+      .then(tweets => theState["tweets"] = tweets.data)
+      .catch(error => console.error(error))
+
+    this.setState(theState)
+  }
+
+  checkState(key, value) {
+    
   }
 
   addTweet(tweet) {

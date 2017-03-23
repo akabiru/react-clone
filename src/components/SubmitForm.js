@@ -10,6 +10,7 @@ class SubmitForm extends Component {
   onSubmit(event) {
     event.preventDefault()
     this.props.onAddTweet(this.refs.tweet.value)
+    console.log("This is this: ", this)
   }
 
   render() {
