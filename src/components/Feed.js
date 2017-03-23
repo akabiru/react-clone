@@ -6,10 +6,10 @@ class Feed extends Component {
     var tweets = [];
     for (var key in this.props.tweets) {
       var tweet = this.props.tweets[key]
-      var user;
+      var user
 
       for (var idx in this.props.users) {
-        if (this.props.users[idx].id == tweet.userId) {
+        if (this.props.users[idx].id === tweet.userId) {
           user = this.props.users[idx]
           break
         }
@@ -20,11 +20,6 @@ class Feed extends Component {
       )
     }
 
-    function getUser() {
-
-    }
-
-    console.log(tweets);
     return (
       <div>
         <p>Hello World</p>

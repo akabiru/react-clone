@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Axios from 'axios';
-import logo from '../styles/logo.svg';
+import axios from 'axios';
 import Feed from './Feed';
 import SubmitForm from './SubmitForm';
 import '../styles/App.css';
@@ -13,28 +12,17 @@ class App extends Component {
       tweets: [],
       users: []
     }
+    this.addTweet = this.addTweet.bind(this)
   }
 
   componentWillMount() {
-    var that = this;
-    
-    Axios.get('http://localhost:4000/tweets')
-      .then(function (tweets) {
-        console.log('Ther er: ', tweets.data);
-        that.setState({ tweets: tweets.data });
-      })
-      .catch(function (error) {
-        // handle error
-      })
+    axios.get('http://localhost:4000/tweets')
+      .then(tweets => this.setState({ tweets: tweets.data }))
+      .catch(error => console.error(error))
 
-    Axios.get('http://localhost:4000/users')
-      .then(function (users) {
-        console.log('Users: ', users.data);
-        that.setState({ users: users.data })
-      })
-      .catch(function (error) {
-        // handle error
-      })
+    axios.get('http://localhost:4000/users')
+      .then((users) => this.setState({ users: users.data }))
+      .catch((error) => console.error(error))
   }
 
   addTweet(tweet) {

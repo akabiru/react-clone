@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 
 class SubmitForm extends Component {
+
+  constructor(props) {
+    super(props)
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+
   onSubmit(event) {
     event.preventDefault()
     this.props.onAddTweet(this.refs.tweet.value)
